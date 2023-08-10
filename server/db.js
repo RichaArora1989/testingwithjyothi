@@ -1,12 +1,10 @@
 const mongoose = require('mongoose');
-// const mongoURI =  "mongodb+srv://memories-project:memoriesproject123@cluster0.ryutq.mongodb.net/stayhealthyfinal?authSource=admin&replicaSet=atlas-svczjj-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true";
-const mongoURI =  "mongodb://127.0.0.1:27017/stayhealthystudentcopy";
-
+const mongoURI =  "mongodb://root:MTAyMTgtcmljaGFh@127.0.0.1:27017/stayhealthy";
 const connectToMongo = async (retryCount) => {
     const MAX_RETRIES = 3;
     const count = retryCount ?? 0;
     try {
-        await mongoose.connect(mongoURI, { dbName: 'stayhealthystudentcopy'});
+        await mongoose.connect(mongoURI, { dbName: 'stayhealthy'});
         console.info('Connected to Mongo Successfully')
 
         return;
